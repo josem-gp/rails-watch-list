@@ -1,3 +1,12 @@
+.lists {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 12px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+
 .list {
   background-size: cover;
   background-position: center;
