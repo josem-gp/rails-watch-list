@@ -1,6 +1,14 @@
-<%= simple_form_for @list do |f| %>
-  <%= f.input :name %>
-  <%= f.submit "Create list", class: "btn btn-primary" %>
-<% end %>
 
-<%= link_to 'Go back', lists_path %>
+<div class="create-list">
+  <%= simple_form_for @list do |f| %>
+    <%= f.input :name, class: "input-name" %>
+    <%= f.submit "Create list", class: "btn btn-primary button" %>
+  <% end %>
+
+  <%= link_to lists_path do %>
+    <i class="fas fa-arrow-circle-left"></i>
+  <% end %>
+  <div class = 'icon'>
+    <%= image_tag 'list.jpeg' %>
+  </div>
+</div>

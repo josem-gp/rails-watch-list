@@ -6,14 +6,17 @@
 </div>
 
 <div class="container">
-  <h2>All Lists</h2>
-
+  <div class="list-header">
+    <h2>All Lists</h2>
+    <%= link_to new_list_path do %>
+      <i class="fas fa-plus-square"></i>
+    <% end %>
+  </div>
   <div class="lists">
       <% @lists.each do |list| %>
         <div class="list" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-          <h3><%= link_to list.name, list_path(list) %></h3>
+          <h3><%= link_to list.name, list_path(list), class: 'list-link' %></h3>
         </div>
       <% end %>
   </div>
-  <%= link_to 'Create a list', new_list_path %>
 </div>

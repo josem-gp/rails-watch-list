@@ -4,21 +4,28 @@
   grid-gap: 12px;
   margin-top: 12px;
   margin-bottom: 12px;
+  .list {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 180px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    .list-link {
+      position:absolute;
+      top:0;
+      left:0;
+      bottom:0;
+      width: 100%;
+      text-align: center;
+    }
+    a {
+      text-decoration: none;
+      vertical-align: center;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    }
+  }
 }
-
-
-.list {
-  background-size: cover;
-  background-position: center;
-  height: 180px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
-
