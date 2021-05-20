@@ -1,7 +1,17 @@
+<div class="banner-mini" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path "cinema.jpeg", alt: "Cinema"%>);">
+  <div class="container ">
+    <h1>Create a Bookmark</h1>
+  </div>
+</div>
+
+<div class="create-form">
 <%= simple_form_for [@list, @bookmark] do |f| %>
   <%= f.input :comment %>
   <%= f.association :movie, collection: Movie.all, prompt: "Choose a Movie" %>
   <%= f.submit "Submit bookmark", class: "btn btn-primary" %>
 <% end %>
 
-<%= link_to 'Go back', list_path(@list) %>
+<%= link_to list_path(@list) do %>
+  <i class="fas fa-arrow-circle-left"></i>
+ <% end %>
+</div>

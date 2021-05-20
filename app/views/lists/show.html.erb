@@ -11,15 +11,24 @@
       <i class="fas fa-plus-square"></i>
     <% end %>
   </div>
-  <div class="lists">
-    <% @list.movies.each do |movie|  %>
-    <div class= "list" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path "https://image.tmdb.org/t/p/w500#{movie.poster_url}", alt: "Movie"%>)">
-    <h3><%= movie.title %></h3>
-    <% movie.bookmarks.each do |bookmark| %>
-    <p><%= link_to bookmark.comment, bookmark_path(bookmark) , method: :delete, data: { confirm: "Are you sure?" } %></p>
-    <% end  %>
+<div class="lists">
+  <% @list.movies.each do |movie|  %>
+<div class="card rounded">
+  <%= image_tag "https://image.tmdb.org/t/p/w500#{movie.poster_url}", alt: "Movie", class: "card-img-top"%>
+    <div class="card-body">
+      <h5 class="card-title"><%= movie.title %></h5>
+      <% movie.bookmarks.each do |bookmark| %>
+        <div class="card-div">
+        <p class="card-text"><%= bookmark.comment %></p>
+        <%= link_to bookmark_path(bookmark) , method: :delete, data: { confirm: "Are you sure?" } do%>
+          <i class="fas fa-trash-alt"></i>
+        <% end %>
+        </div>
+      <% end  %>
+    </div>
   </div>
-  <% end %>
+<% end %>
+</div>
   <%= link_to lists_path do %>
     <i class="fas fa-arrow-circle-left"></i>
   <% end %>
