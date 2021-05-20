@@ -1,0 +1,21 @@
+.create-form {
+  position:relative;
+  height: 400px;
+  width: 25%;
+  padding: 12px;
+  margin: 48px auto;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  border-radius: 4px;
+  .form-group {
+    margin-bottom: 24px;
+    margin-top: 12px;
+  }
+  .button{
+    margin-bottom: 24px;
+  }
+  a{
+    text-decoration: none;
+    font-size: 24px;
+  }
+}

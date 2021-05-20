@@ -1,11 +1,27 @@
-<h1><%= @list.name %></h1>
+<div class="banner-mini" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path "cinema.jpeg", alt: "Cinema"%>);">
+  <div class="container ">
+    <h1>New List</h1>
+  </div>
+</div>
 
-<% @list.movies.each do |movie|  %>
-<h3><%= movie.title %></h3>
-<% movie.bookmarks.each do |bookmark| %>
-<p><%= link_to bookmark.comment, bookmark_path(bookmark) , method: :delete, data: { confirm: "Are you sure?" } %></p>
-<% end  %>
-<% end %>
+<div class="container">
+  <div class="list-header">
+    <h2><%= @list.name %></h2>
+    <%= link_to new_list_bookmark_path(@list) do %>
+      <i class="fas fa-plus-square"></i>
+    <% end %>
+  </div>
+  <div class="lists">
+    <% @list.movies.each do |movie|  %>
+    <div class= "list" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path "https://image.tmdb.org/t/p/w500#{movie.poster_url}", alt: "Movie"%>)">
+    <h3><%= movie.title %></h3>
+    <% movie.bookmarks.each do |bookmark| %>
+    <p><%= link_to bookmark.comment, bookmark_path(bookmark) , method: :delete, data: { confirm: "Are you sure?" } %></p>
+    <% end  %>
+  </div>
+  <% end %>
+  <%= link_to lists_path do %>
+    <i class="fas fa-arrow-circle-left"></i>
+  <% end %>
+</div>
 
-<%= link_to 'Create a bookmark', new_list_bookmark_path(@list) %>
-<%= link_to 'Go back', lists_path %>

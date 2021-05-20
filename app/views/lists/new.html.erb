@@ -1,5 +1,10 @@
+<div class="banner-mini" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path "cinema.jpeg", alt: "Cinema"%>);">
+  <div class="container ">
+    <h1>New List</h1>
+  </div>
+</div>
 
-<div class="create-list">
+<div class="create-form">
   <%= simple_form_for @list do |f| %>
     <%= f.input :name, class: "input-name" %>
     <%= f.submit "Create list", class: "btn btn-primary button" %>

@@ -5,22 +5,39 @@
   background-position: center;
   padding: 150px 0;
   height: 100px;
+  h1 {
+    margin: 0;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    font-size: 54px;
+    font-weight: bold;
+    text-align: right;
+  }
+
+  p {
+    font-size: 20px;
+    color: white;
+    opacity: .7;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    margin-top: 12px;
+    text-align: right;
+  }
 }
 
-.banner h1 {
-  margin: 0;
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 54px;
-  font-weight: bold;
-  text-align: right;
-}
+.banner-mini {
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: 50% 38%;
+  padding: 100px 0;
+  height: 50px;
 
-.banner p {
-  font-size: 20px;
-  color: white;
-  opacity: .7;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  margin-top: 12px;
-  text-align: right;
+  h1 {
+    margin: 0;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    font-size: 54px;
+    font-weight: bold;
+    text-align: right;
+  }
 }
