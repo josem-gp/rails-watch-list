@@ -6,6 +6,9 @@
   margin-bottom: 12px;
   .list {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-size: cover;
     background-position: center;
     height: 180px;
@@ -19,7 +22,7 @@
       width: 100%;
       text-align: center;
     }
-    a {
+    h3 {
       text-decoration: none;
       vertical-align: center;
       color: white;
