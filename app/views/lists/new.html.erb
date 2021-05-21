@@ -7,6 +7,7 @@
 <div class="create-form">
   <%= simple_form_for @list do |f| %>
     <%= f.input :name, class: "input-name" %>
+    <%= f.input :photo, as: :file %>
     <%= f.submit "Create list", class: "btn btn-primary button" %>
   <% end %>
 

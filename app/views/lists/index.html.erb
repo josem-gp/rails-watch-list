@@ -14,7 +14,7 @@
   </div>
   <div class="lists">
       <% @lists.each do |list| %>
-        <div class="list" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+        <div class="list" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : image_path('list.jpg') %>)">
           <h3><%= link_to list.name, list_path(list), class: 'list-link' %></h3>
         </div>
       <% end %>
